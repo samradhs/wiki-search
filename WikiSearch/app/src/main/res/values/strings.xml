@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">WikiSearch</string>
+    <string name="search_hint">Search&#8230;</string>
+    <string name="wiki_image">Wiki item image</string>
+
+    <string name="sch_res_empty">Start searching Wikipedia</string>
+    <string name="internet_check">Please turn on internet</string>
+    <string name="general_error">Something went wrong</string>
+</resources>

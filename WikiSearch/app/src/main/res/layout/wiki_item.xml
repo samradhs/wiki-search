@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/ViewMatchWidth"
+    app:cardCornerRadius="2dp"
+    app:cardElevation="2dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        style="@style/ViewMatchWidth"
+        android:padding="@dimen/margin_large">
+
+        <ImageView
+            android:id="@+id/wiki_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="@string/wiki_image"
+            android:layout_marginEnd="@dimen/margin_large"
+            android:scaleType="centerCrop"/>
+
+        <TextView
+            android:id="@+id/wiki_item_title"
+            style="@style/ViewMatchWidth"
+            android:text="@string/app_name"
+            android:textSize="@dimen/text_size_medium"
+            android:textColor="@color/text_dark"
+            android:maxLines="1"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            android:layout_toEndOf="@id/wiki_image"/>
+
+        <TextView
+            android:id="@+id/wiki_item_desc"
+            style="@style/ViewMatchWidth"
+            android:text="@string/app_name"
+            android:textSize="@dimen/text_size_small"
+            android:textColor="@color/text_light"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:layout_toEndOf="@id/wiki_image"
+            android:layout_below="@id/wiki_item_title"
+            android:layout_marginTop="@dimen/margin_very_small"/>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

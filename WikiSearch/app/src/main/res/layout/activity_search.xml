@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/ViewMatch">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/sch_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorAccent"
+        app:titleTextColor="@color/text_very_light"
+        app:title="@string/app_name"/>
+
+    <LinearLayout
+        android:id="@+id/sch_content"
+        style="@style/ViewMatch"
+        android:orientation="vertical"
+        android:layout_below="@id/sch_toolbar">
+
+        <FrameLayout
+            style="@style/ViewMatchWidth"
+            android:paddingBottom="@dimen/margin_very_large"
+            android:background="@color/colorAccent">
+
+            <EditText
+                android:id="@+id/sch_search_view"
+                style="@style/ViewMatchWidth"
+                android:inputType="text"
+                android:hint="@string/search_hint"
+                android:background="@drawable/ic_edittext_bg"
+                android:textSize="@dimen/text_size_medium"
+                android:padding="@dimen/margin_small"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginEnd="@dimen/margin_small"/>
+
+        </FrameLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/sch_search_results"
+            style="@style/ViewMatch"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/sch_search_placeholder"
+            style="@style/ViewMatch"
+            android:gravity="center"
+            android:text="@string/sch_res_empty"/>
+
+        <ProgressBar
+            android:id="@+id/sch_req_progress"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:indeterminate="true"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
